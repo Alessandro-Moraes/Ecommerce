@@ -1,0 +1,50 @@
+Create Database p3;
+
+Use p3;
+
+Create Table usuarios
+(id Int Not Null Auto_Increment,
+login Varchar(100) Not Null,
+email Varchar(100),
+senha Varchar(100) Not Null,
+tipo Varchar(25) Not Null,
+avatar Varchar(100),
+dataCadastro DateTime Default (CURTIME()),
+Constraint PK_usuario_id Primary Key (id));
+
+Create Table comentarios
+(idComentario Int Not Null Auto_Increment,
+comentario Varchar(255) Not Null,
+dataComentario DateTime Default (CURTIME()),
+Constraint PK_comentario_idComentario Primary Key (idComentario));
+
+Alter Table comentarios
+Add id Int null;
+
+Alter Table comentarios
+Add Constraint FK_comentario_id Foreign Key (id)
+References usuarios (id);
+
+Create Table produtos
+(idProduto Int Not Null Auto_Increment,
+produto Varchar(100) Not Null,
+categoria Varchar(100) Not Null,
+destaque Varchar(5) Not Null,
+valor Decimal(5,2) Not Null,
+descricao Varchar(255) Null,
+imagem Varchar(100),
+Constraint PK_produto_idProduto Primary Key (idProduto));
+
+Alter Table produtos
+Add Id Int null;
+
+Alter Table produtos
+Add Constraint FK_produtos_id Foreign Key (id)
+References usuarios (id);
+
+Alter Table comentarios
+Add idProduto Int null;
+
+Alter Table comentarios
+Add Constraint FK_comentario_idProduto Foreign Key (idProduto)
+References produtos (idProduto);

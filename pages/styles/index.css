@@ -1,0 +1,113 @@
+.card {
+  background-color: var(--bg-panel);
+  border-radius: 5px;
+  width: 90%;
+  height: 100%;
+}
+
+h3 {
+  text-align: center;
+}
+
+h5 {
+  padding: 1rem 0 0 1rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnLogout {
+  border: none;
+  margin-right: 1rem;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.btnLogout:hover {
+  color: var(--color-text);
+  text-decoration: none;
+  text-shadow: 2px 2px 5px var(--color-text);
+}
+
+.imgLogin {
+  border-radius: 7px;
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+}
+
+.publicacoes {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.comentarios {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 100%;
+  max-width: 6rem;
+  height: 6rem;
+  border-radius: 5px;
+  min-width: 3rem;
+  min-height: 3rem;
+}
+
+.comentario {
+  text-align: justify;
+  flex: 1;
+  border-radius: 5px;
+  width: 50vw;
+  height: 15vh;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.comentario::placeholder {
+  padding: 2rem 1rem;
+}
+
+.btnPublicar {
+  background: var(--bg);
+  align-items: center;
+  width: 8rem;
+  height: 3.5rem;
+  border-radius: 5px;
+  color: var(--color-text);
+}
+
+.btnPublicar:hover {
+  border: solid 2px var(--color-border-success-dark);
+  box-shadow: 2px 1px 2px var(--color-border-success-dark);
+  background: var(--bg-panel);
+  color: var(--color-text);
+}
+
+.btnExcluir {
+  background: var(--bg);
+  align-items: center;
+  width: 8rem;
+  height: 3.5rem;
+  border-radius: 5px;
+  color: var(--color-text);
+}
+
+.btnExcluir:hover {
+  border: solid 2px var(--color-border-clear-dark);
+  background: var(--bg-panel);
+  color: var(--color-text);
+}
